@@ -772,7 +772,7 @@ private getFormattedLocalTime(utcTime) {
 		try {
 			def localTZ = TimeZone.getTimeZone(location.timeZone.ID)
 			def localDate = new Date(utcTime + localTZ.getOffset(utcTime))	
-			return localDate.format("MM/dd/yyyy HH:mm:ss")
+			return localDate.format("dd/MM/yyyy HH:mm:ss")
 		}
 		catch (e) {
 			logWarn "Unable to get formatted local time for ${utcTime}: ${e.message}"
